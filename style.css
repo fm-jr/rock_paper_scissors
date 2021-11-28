@@ -1,0 +1,37 @@
+body {
+    background-color: #ccc;
+}
+.selections {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 32px;
+}
+.selections img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.selection {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 100ms;
+}
+.selection:hover {
+    transform: scale(1.2);
+}
+.results {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: 32px;
+}
+.result-score {
+    margin-left: 20px;
+    font-size: 40px;
+    color: rgb(8, 235, 39);
+}
