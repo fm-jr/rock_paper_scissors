@@ -1,7 +1,7 @@
-// Begin with computerPlay
+
 let player = prompt("Would you like to play a game?");
 
-
+// One round
 if (player == "yes") {
     alert("you have chosen death");
     
