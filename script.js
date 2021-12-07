@@ -4,7 +4,7 @@ if (player == "yes") {
     alert("The game is Rock, Paper, Scissors. First to 5 wins. Let's Go!");
     game();
 } else {
-    alert("well now im just dissapointed");
+    alert("Well, now I'm just disappointed.");
 }
 
 
@@ -24,35 +24,37 @@ function game() {
         const computerSelection = computerPlay();
         const playerSelection = prompt("rock, paper, or scissors?");
         playRound(playerSelection, computerSelection);
-        console.log('Current score: Human: ', playerScore, ' Computer: ', computerScore);
+        console.log('Current score: Player: ', playerScore, ' Computer: ', computerScore);
         
             
             function playRound(playerSelection, computerSelection) {
+                computerSelection = computerPlay().toLowerCase();
+                playerSelection = playerSelection.toLowerCase();
                 
-                if (playerSelection === 'rock' && computerSelection === 'rock' ||
-                    playerSelection === 'paper' && computerSelection === 'paper' ||
-                    playerSelection === 'scissors' && computerSelection === 'scissors') {
-                    console.log("its a tie! youre adequate");
-                } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+                if (playerSelection == 'rock' && computerSelection === 'rock' ||
+                    playerSelection == 'paper' && computerSelection === 'paper' ||
+                    playerSelection == 'scissors' && computerSelection === 'scissors') {
+                    console.log(" Looks like a tie. Try again!");
+                } else if (playerSelection == 'rock' && computerSelection === 'paper') {
                     computerScore += 1;
-                    console.log("loser! paper beats rock. sad.");
-                } else if(playerSelection === 'rock' && computerSelection === 'scissors') {
+                    console.log("Paper beats rock! The computer wins this one.");
+                } else if(playerSelection == 'rock' && computerSelection === 'scissors') {
                     playerScore += 1;
-                    console.log("rock beats scissors, you win!");
-                } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+                    console.log("Rock beats scissors. Good job!");
+                } else if (playerSelection == 'paper' && computerSelection === 'rock') {
                     playerScore += 1;
-                    console.log("paper beats rock, you win!");
-                } else if(playerSelection === 'paper' && computerSelection === 'scissors') {
+                    console.log("Paper beats rock. You win this round!");
+                } else if(playerSelection == 'paper' && computerSelection === 'scissors') {
                     computerScore += 1;
-                    console.log("scissors beats paper- you lose and im disappointed in you.");
-                } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+                    console.log("Scissors beats paper! The computer is on a roll...");
+                } else if (playerSelection == 'scissors' && computerSelection === 'rock') {
                     computerScore += 1;
-                    console.log("loser! rock beats scissors. do better next time.");
-                } else if(playerSelection === 'scissors' && computerSelection === 'paper') {
+                    console.log("Rock beats scissors, try again!");
+                } else if(playerSelection == 'scissors' && computerSelection === 'paper') {
                     playerScore += 1;
-                    console.log("you win! scissors beats paper!");
+                    console.log("Great job! Scissors beats paper!");
                 } else {
-                    alert("pick rock, paper, or scissors, or get out.");
+                    alert("I thought we decided that you would choose rock, paper, or scissors?");
                 }
             }
         } if (playerScore == 5) {
