@@ -31,10 +31,8 @@ function game() {
                 computerSelection = computerPlay().toLowerCase();
                 playerSelection = playerSelection.toLowerCase();
                 
-                if (playerSelection == 'rock' && computerSelection === 'rock' ||
-                    playerSelection == 'paper' && computerSelection === 'paper' ||
-                    playerSelection == 'scissors' && computerSelection === 'scissors') {
-                    console.log(" Looks like a tie. Try again!");
+                if (playerSelection == computerSelection) {
+                    console.log("Looks like a tie. Try again!");
                 } else if (playerSelection == 'rock' && computerSelection === 'paper') {
                     computerScore += 1;
                     console.log("Paper beats rock! The computer wins this one.");
